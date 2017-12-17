@@ -96,7 +96,7 @@ Programming Puzzles
 - [ ] Find the longest palindromic substring in O(n^2) time (lc_longest_palindrome.py) - 2
 - [x] Valid-parentheses O(n) time (valid_parentheses.py) - 2
 - [ ] Reverse words while maintaining spaces and tabs in O(n) time (reverse_words.py) - 2
-- [ ] Longest substring without repeating characters in O(n) time (lc_longest_nonrepeat_substring.py) - 2
+- [x] Longest substring without repeating characters in O(n) time (longeststring_wo_repreat.py) - 2
 - [ ] Longest contiguous substring of 2 distinct characters in O(n) time (substring_two_chars.py) - 2
 - [ ] Remove duplicate chars in a string
 - [ ] Encode and decode Caesar cipher (caesar.py)

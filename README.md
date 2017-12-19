@@ -53,6 +53,7 @@ Data structures
 ### Stacks and queues
 
 - [ ] Queue class (queue.py)
+    - [ ]   
 - [ ] Heap priority queue (priority_queue.py) - 1
 - [ ] Stack class (stack.py)
 - [ ] Stack that finds min in O(1) (min_stack.py)
@@ -117,6 +118,6 @@ Programming Puzzles
 - [ ] Find sum of all subarrays of an array (subarray_sum.py) - 2
 - [ ] Add two numbers, each represented by a reverse linked list (lc_add_number_reverse.py) - 2
 - [ ] Find the median of two sorted arrays in O(log(m+n)) time (lc_median_arrays.py) - 3
-- [ ] Find nth smallest number that can be created using a list of prime factors
+- [ ] Find nth smallest number that can be created using a list of prime factors (ugly.py) - 2
 - [ ] Count occurences of given digit in all numbers up to n
 - [ ] Rotate N x N matrix in place

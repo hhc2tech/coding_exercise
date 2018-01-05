@@ -18,7 +18,7 @@ Data structures
 
 ### Linked lists
 
-- [ ] List class (linked_list.py) - 1
+- [x] List class (linked_list.py) - 1
 - [ ] Remove duplicates (linked_list_algos.py)
 - [ ] Find nth last element (linked_list_algos.py)
 - [ ] Remove node given only its object (linked_list_algos.py)

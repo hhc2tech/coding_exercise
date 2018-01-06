@@ -7,6 +7,11 @@ Methods available:
     * pop 
     * top 
     * isempty 
+
+using built-in queue 
+    q = collections.deque
+    q.popleft()
+    q.append(val)
 '''
 
 from __future__ import print_function

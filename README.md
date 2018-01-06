@@ -120,3 +120,6 @@ Programming Puzzles
 - [ ] Find nth smallest number that can be created using a list of prime factors (ugly.py) - 2
 - [ ] Count occurences of given digit in all numbers up to n
 - [ ] Rotate N x N matrix in place
+
+### Others 
+- [ ] Binary search 

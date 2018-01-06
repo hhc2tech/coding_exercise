@@ -1,61 +1,44 @@
 '''
-source:
-https://leetcode.com/problems/minimum-size-subarray-sum/description/
-
-Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum >= s. If there isn't one, return 0 instead.
-
-For example, given the array [2,3,1,2,4,3] and s = 7,
-the subarray [4,3] has the minimal length under the problem constraint.
-
-more practice: https://leetcode.com/problems/minimum-size-subarray-sum/description/#
-'''
-
-''' IDEA 
-two pointers start, end 
-res = 0 
-increase end until sum >= s, save len 
-increase start until sum < s, save len + 1
-
-save best_len during the process 
+Binary search 
+suppose that the list is already sorted 
 '''
 
 
 class Solution(object):
-    def minSubArrayLen(self, target, nums):
+    # O(n)
+    def binary_search(self, a, nums):
         """
         :type s: int
         :type nums: List[int]
         :rtype: int
         """
-        best_len = 0x7fffffff # maximum 32-bit integer
-        if len(nums) == 0: return 0
-        s = start = end = 0 
-        if sum(nums) < target: return 0 
-        while end < len(nums):
-            while s < target and end < len(nums):
-                s += nums[end]
-                end += 1 
-            # if end < len(nums):
-            #     best_len = min(best_len, end - start + 1)
-            while s >= target:
-                s -= nums[start]
-                start += 1
-            best_len = min(best_len, end - start + 1)
-        return best_len 
+        left = 0
+        right = len(nums) - 1
+        while left <= right: 
+            mid = (left + right) // 2
+            b = nums[mid]
+            if b == a: return mid
+            if b < a: 
+                left = mid + 1
+            else: 
+                right = mid-1 
+        return -1 
+
 
         
 
 
-tests = [ ([2,3,1,2,4,3], 7, 2), 
-        ([], 2, 0),
-        ([1, 2], 2, 1),
-        ([1, 2, 3, 4,5 ,6, 7, 1, 2], 7, 1),
-        ([1], 2, 0),
+tests = [ ([1, 2, 5, 6, 8, 100], -1, -1), 
+        ([1, 2, 5, 6, 8, 100], 1, 0),
+        ([1, 2, 5, 6, 8, 100], 100, 5),
+        ([1, 2, 5, 6, 8, 100], 90, -1),
+        ([1, 2, 5, 6, 8, 100], 2, 1),
+        ([1, 2, 5, 6, 8, 100], 200, -1),
           ]
 
 
 for test in tests:
-    out = Solution().minSubArrayLen(test[1], test[0])
+    out = Solution().binary_search(test[1], test[0])
     assert out == test[-1], "incorrect in " + str(test) + ", out = " + str(out)
 
 print "All tests passed!"

@@ -3,7 +3,7 @@
 Stack without using list 
 attribute: tail
 Methods available:
-    * append 
+    * push 
     * pop 
     * top 
     * isempty 
@@ -20,7 +20,7 @@ class Stack(object):
         self.tail = None
         # self._tail = None
 
-    def append(self, value):
+    def push(self, value):
         new_tail = Node(value, next = self.tail)
         self.tail = new_tail
     def isempty(self):
@@ -63,7 +63,7 @@ def creatStack(nums):
     """
     l = Stack() 
     for n in nums:
-        l.append(n)
+        l.push(n)
     return l 
 
 # def test_linkedlist():
@@ -75,5 +75,5 @@ if __name__ == "__main__":
     l5 = creatStack([1, 2])
     l6 = creatStack([1, 2, 3, 4, 2])
     print(l6)
-    print(l2.pop())
-    print(l2)
+    print(l6.pop())
+    print(l6)

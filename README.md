@@ -119,7 +119,7 @@ Programming Puzzles
 - [ ] Find the median of two sorted arrays in O(log(m+n)) time (lc_median_arrays.py) - 3
 - [ ] Find nth smallest number that can be created using a list of prime factors (ugly.py) - 2
 - [ ] Count occurences of given digit in all numbers up to n
-- [ ] Rotate N x N matrix in place
+- [x] Rotate N x N matrix in place (rotateimage.py) - 1
 
 ### Others 
 - [ ] Binary search 

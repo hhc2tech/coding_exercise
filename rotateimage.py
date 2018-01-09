@@ -67,6 +67,10 @@ class Solution(object):
                     m[n-j-1][i], m[i][j], m[j][n-i-1], m[n-i-1][n-j-1]
         return m 
 
+    def rotate3(self, m):
+        m[:] = zip(*m[::-1])
+        return m 
+
 m = [[1, 2, 3], 
      [4, 5, 6], 
      [7, 8, 9]]
@@ -77,4 +81,4 @@ m2 = [
   [13, 3, 6, 7],
   [15,14,12,16]
 ]
-print(Solution().rotate2(m2))
+print(Solution().rotate3(m2))

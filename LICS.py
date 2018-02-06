@@ -51,3 +51,10 @@ for test in tests:
     assert out == test[1], "incorrect in " + str(test) + ", out = " + str(out)
 
 print "All tests passed!"
+
+# class ClassName(object):
+#     """docstring for ClassName"""
+#     def __init__(self, arg):
+#         super(ClassName, self).__init__()
+#         self.arg = arg
+        

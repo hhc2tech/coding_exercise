@@ -13,17 +13,17 @@ def lcs(X, Y):
                 dp[i][j] = dp[i-1][j-1]+1
                 trace[i][j] = 0
             else:
-                if dp[i-1][j] < dp[i][j-1]: 
+                if dp[i-1][j] < dp[i][j-1]:
                     trace[i][j] = -1
                     dp[i][j] = dp[i][j-1]
-                else: 
+                else:
                     trace[i][j] = 1
                     dp[i][j] = dp[i-1][j]
     return dp[m][n], trace
 
 def print_trace(trace, X, i, j):
-    if i == 0 or j == 0: return 
-    if trace[i][j] == 0: 
+    if i == 0 or j == 0: return
+    if trace[i][j] == 0:
         print_trace(trace, X, i-1, j-1)
         print X[i-1],
     elif trace[i][j] == -1 :

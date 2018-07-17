@@ -56,22 +56,25 @@ def mergeKlists(lists):
     import heapq
     if not lists: return None
     q = []
-    for i, l in enumerate(lists):
-        if lists[i]:
-            heapq.heappush(q, (lists[i].val, i))
-            lists[i] = lists[i].next
+    for l in lists:
+        if l:
+            heapq.heappush(q, (l.val, l))
+
     dumm = curr = ListNode(0)
     while q:
-        val, i = heapq.heappop(q)
-        curr.next = ListNode(val)
+        val, l = heapq.heappop(q)
+        # curr.next = ListNode(val)
+        curr.next = l
         curr = curr.next
-        if lists[i]:
-            heapq.heappush(q, (lists[i].val, i))
-            lists[i] = lists[i].next
+        if l.next:
+            heapq.heappush(q, (l.next.val, l.next))
+            l = l.next
     return dumm.next
 
 def _mergeKlists():
     lists = [createList([1, 4, 5]), createList([1, 3, 4]), createList([2, 6])]
+    printList(mergeKlists(lists))
+    lists = [createList([]), createList([1])]
     printList(mergeKlists(lists))
 
 if __name__ == '__main__':

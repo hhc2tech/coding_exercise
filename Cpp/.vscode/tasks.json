@@ -8,8 +8,8 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",                
-                "ex1.cpp"
+                "-std=c++11",                
+                "Linkedlist.cpp"
             ],
             "group": {
                 "kind": "build",
